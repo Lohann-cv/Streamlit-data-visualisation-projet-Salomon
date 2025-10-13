@@ -49,28 +49,10 @@ try:
 except NameError:
     pass
 
-# Partie 3D
 st.title("Visualisation de modèles 3D Blender (.glb)")
-layout = st.radio("Disposition des modèles :", ["Côte à côte", "L'un en dessous de l'autre"])
-
-st.markdown("""
-    https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
-""", unsafe_allow_html=True)
-
-# Fonction affichage
-def render_model(path):
-    components.html(f"""
-        {path}
-        </model-viewer>
-    """, height=500)
-
-# Affichage selon la disposition choisie
-if layout == "Côte à côte":
-    col1, col2 = st.columns(2)
-    with col1:
-        render_model("static/modele1.glb")
-    with col2:
-        render_model("static/modele2.glb")
-else:
-    render_model("static/modele1.glb")
-    render_model("static/modele2.glb")
+with col1:
+    st.video
+    st.image()
+with col2:
+    st.video()
+    st.image()
