@@ -49,29 +49,28 @@ try:
 except NameError:
     pass
 
-# Partie pour le modèle 3D
-st.title('Visualisation de nos produits proposés pour Salomon')
+# Partie 3D
+st.title("Visualisation de modèles 3D Blender (.glb)")
 layout = st.radio("Disposition des modèles :", ["Côte à côte", "L'un en dessous de l'autre"])
 
+st.markdown("""
+    https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js
+""", unsafe_allow_html=True)
+
+# Fonction affichage
 def render_model(path):
-    return f"""
-    <model-viewer src="{path}"
-                  alt="Modèle 3D"
-                  auto-rotate
-                  camera-controls
-                  style="width: 100t/model-viewer.min.js</script>
-    """,
-    height=0,
+    components.html(f"""
+        {path}
+        </model-viewer>
+    """, height=500)
 
-
-
-# Affichage selon le layout choisi
+# Affichage selon la disposition choisie
 if layout == "Côte à côte":
     col1, col2 = st.columns(2)
     with col1:
-        components.html(render_model("static/modele1.glb"), height=500)
+        render_model("static/modele1.glb")
     with col2:
-        components.html(render_model("static/modele2.glb"), height=500)
+        render_model("static/modele2.glb")
 else:
-    components.html(render_model("static/modele1.glb"), height=500)
-    components.html(render_model("static/modele2.glb"), height=500)
+    render_model("static/modele1.glb")
+    render_model("static/modele2.glb")
