@@ -1,0 +1,17 @@
+
+[theme]
+primaryColor = "#4A5F44"         # Rouge Salomon
+backgroundColor = "#FDF6EC"      # beige clair
+secondaryBackgroundColor = "#F2F2F2"  # Gris clair
+textColor = "#000000"            # Noir
+font = "sans serif"
+
+[server]
+headless = true
+
+[client]
+showSidebarNavigation = true
+
+[browser]
+title = "Visualisation Salomon"
+favicon = "https://upload.wikimedia.org/wikipedia/commons/5/5f/Salomon-logo.png"

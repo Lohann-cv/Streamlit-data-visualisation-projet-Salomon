@@ -10,10 +10,10 @@ st.image('image/salomon.png')
 # Set up des deux colones et boutons pour les dataframe
 col1, col2 = st.columns(2)
 with col1:
-    if st.button("Dataframe client", width='stretch'):
+    if st.button("Dataframe client", width='stretch', type='primary'):
         show_client = True
 with col2:
-    if st.button("Dataframe vendeur", width='stretch'):
+    if st.button("Dataframe vendeur", width='stretch', type='primary'):
         show_sellers = True
 
 
@@ -31,10 +31,10 @@ except NameError:
 
 # Bouton pour la visualisation du graphique
 with col1:
-    if st.button('Visualisation graphique client', type='secondary', width='stretch'):
+    if st.button('Visualisation graphique client', type='primary', width='stretch'):
         plot_client = True
 with col2:
-    if st.button('Visualisation graphique vendeur', type='secondary', width='stretch'):
+    if st.button('Visualisation graphique vendeur', type='primary', width='stretch'):
         plot_sellers = True
 
 try:
