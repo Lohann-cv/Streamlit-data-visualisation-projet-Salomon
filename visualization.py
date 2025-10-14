@@ -36,3 +36,16 @@ def plot_sellers():
     ax.set_ylabel("Nombre de réponses")
     ax.legend()
     st.pyplot(fig)
+
+def plot_gender():
+    # Données
+    labels = ['Femme', 'Homme']
+    sizes = [35, 65]
+
+    # Création du graphique camembert
+    fig, ax = plt.subplots()
+    ax.set_title('Répartition des genres des personnes ayant répondu aux questions')
+    ax.pie(sizes, labels=labels, autopct='%1.1f%%')
+    ax.axis('equal')
+
+    st.pyplot(fig)
