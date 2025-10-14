@@ -49,10 +49,17 @@ try:
 except NameError:
     pass
 
-st.title("Visualisation de modèles 3D Blender (.glb)")
+st.title("Les produits de la capsule JR x Salomon")
+st.subheader("Les poduit techwears")
 with col1:
-    st.video
-    st.image()
+    st.video('pullEwan.mp4')
+    st.image('skiAN;jpeg')
 with col2:
-    st.video()
-    st.image()
+    st.video('salomonEwan1.mp4')
+    st.image('salomonEwan1.jpeg')
+
+st.subheader('Les produits streetwears')
+with col1:
+    st.image('surchemiseA.jpeg')
+with col2:
+    st.image('tshirtA.jpeg')
